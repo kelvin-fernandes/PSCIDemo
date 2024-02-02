@@ -25,3 +25,12 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
+
+  deploy:
+    runs-on: ubuntu-latest
+
+    environment: Production
+
+    steps:
+    - name: Run echo command
+      run: echo "Production environment rules worked fine!"
